@@ -1,4 +1,5 @@
 require_relative 'spec_helper'
+require "pry"
 
 describe Show do
   let(:show) {Show.new}
@@ -29,7 +30,7 @@ describe Show do
     character.actor = andrew
     show.characters << character
     show.save
-
+  
     expect(show.actors_list.length).to eq(1)
     expect(show.actors_list).to include('Andrew Lincoln')
 
